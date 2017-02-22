@@ -2,5 +2,14 @@
     <wb-module deploy-name="lma-enterprise-ear-0.0.1-SNAPSHOT">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="lma-enterprise-util-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/lma-enterprise-util/lma-enterprise-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="lma-enterprise-mweb-0.0.1-SNAPSHOT.war" deploy-path="/" handle="module:/resource/lma-enterprise-mweb/lma-enterprise-mweb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="lma-enterprise-web-0.0.1-SNAPSHOT.war" deploy-path="/" handle="module:/resource/lma-enterprise-web/lma-enterprise-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>
