@@ -18,10 +18,6 @@ dependencies:
   override:
     - mvn install
 
-  pre:
-    - wget https://repo.eclipse.org/content/repositories/egit-releases/org/eclipse/mylyn/github/org.eclipse.mylyn.github.core/3.1.0.201310021548-r/org.eclipse.mylyn.github.core-3.1.0.201310021548-r.jar
-    - mvn install:install-file -DgroupId=org.eclipse.mylyn.github -DartifactId=org.eclipse.egit.github.core -Dversion=3.1.0.201310021548-r -Dpackaging=jar -Dfile=org.eclipse.mylyn.github.core-3.1.0.201310021548-r.jar
-
 ## Configuring artifacts to be retrieved
 general:
    artifacts:
@@ -33,4 +29,4 @@ test:
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-    - mv JavaHonkEARModule/target/*.ear $CIRCLE_ARTIFACTS/
+    - mv lma-enterprise-ear/target/*.ear $CIRCLE_ARTIFACTS/
