@@ -11,7 +11,7 @@ machine:
         
   # Version of Java to use
   java:
-    version: openjdk7
+    version: openjdk8
     
 ## Configuring custom dependencies
 dependencies:
