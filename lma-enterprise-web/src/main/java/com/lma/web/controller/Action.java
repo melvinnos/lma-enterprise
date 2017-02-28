@@ -6,12 +6,7 @@ import java.io.Serializable;
  * @author bhernaag
  *
  */
-public class Action implements Actioni, Serializable{
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class Action implements Actioni,Serializable{
 	
 	
 }

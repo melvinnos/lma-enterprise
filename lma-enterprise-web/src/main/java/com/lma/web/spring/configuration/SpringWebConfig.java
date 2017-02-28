@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({ "com.lma.web" })
+@ComponentScan({ "com.lma" })
 public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
 	@Override

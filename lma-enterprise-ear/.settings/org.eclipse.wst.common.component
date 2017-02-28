@@ -2,13 +2,82 @@
     <wb-module deploy-name="lma-enterprise-ear-0.0.1-SNAPSHOT">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
-        <dependent-module archiveName="lma-enterprise-util-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/lma-enterprise-util/lma-enterprise-util">
+        <dependent-module archiveName="lma-enterprise-web-0.0.1-SNAPSHOT.war" deploy-path="/" handle="module:/resource/lma-enterprise-web/lma-enterprise-web">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="lma-enterprise-mweb-0.0.1-SNAPSHOT.war" deploy-path="/" handle="module:/resource/lma-enterprise-mweb/lma-enterprise-mweb">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="lma-enterprise-web-0.0.1-SNAPSHOT.war" deploy-path="/" handle="module:/resource/lma-enterprise-web/lma-enterprise-web">
+        <dependent-module archiveName="lma-enterprise-bs-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/lma-enterprise-bs/lma-enterprise-bs">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="lma-enterprise-dao-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/lma-enterprise-dao/lma-enterprise-dao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="lma-enterprise-util-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/lma-enterprise-util/lma-enterprise-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-core-4.3.4.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-core/4.3.4.RELEASE/spring-core-4.3.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-web-4.3.4.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-web/4.3.4.RELEASE/spring-web-4.3.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-aop-4.3.4.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-aop/4.3.4.RELEASE/spring-aop-4.3.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-beans-4.3.4.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-beans/4.3.4.RELEASE/spring-beans-4.3.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-webmvc-4.3.4.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-webmvc/4.3.4.RELEASE/spring-webmvc-4.3.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-expression-4.3.4.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-expression/4.3.4.RELEASE/spring-expression-4.3.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-context-4.3.6.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-context/4.3.6.RELEASE/spring-context-4.3.6.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-jdbc-4.3.4.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-jdbc/4.3.4.RELEASE/spring-jdbc-4.3.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-orm-4.3.4.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-orm/4.3.4.RELEASE/spring-orm-4.3.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-test-4.3.4.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-test/4.3.4.RELEASE/spring-test-4.3.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="spring-tx-4.3.4.RELEASE.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/springframework/spring-tx/4.3.4.RELEASE/spring-tx-4.3.4.RELEASE.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jcl-over-slf4j-1.7.12.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/slf4j/jcl-over-slf4j/1.7.12/jcl-over-slf4j-1.7.12.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="slf4j-api-1.7.12.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="logback-classic-1.1.3.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/ch/qos/logback/logback-classic/1.1.3/logback-classic-1.1.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="logback-core-1.1.3.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/ch/qos/logback/logback-core/1.1.3/logback-core-1.1.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jstl-1.2.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/jstl/jstl/1.2/jstl-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang3-3.5.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.2.2.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-beanutils-1.9.3.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging-1.2.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-logging/commons-logging/1.2/commons-logging-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.17.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/log4j/log4j/1.2.17/log4j-1.2.17.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>
