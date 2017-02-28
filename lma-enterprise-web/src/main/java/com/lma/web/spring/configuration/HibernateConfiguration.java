@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan({ "com.lma" })
-@PropertySource(value = { "classpath:application.properties" })
+//@PropertySource(value = { "classpath:application.properties" })
 public class HibernateConfiguration {
  
 	 /* TODO Uncomment when all the dependencies are added.
