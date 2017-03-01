@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author agustin.hernandez
  *
  */
-@Controller
+@Controller("testController")
 @ComponentScan(basePackages = "org.lma.enterprise.facade")
 public class TestController {
 
