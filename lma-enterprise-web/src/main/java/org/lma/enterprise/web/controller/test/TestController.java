@@ -49,10 +49,15 @@ public class TestController implements Serializable{
 		public String showAllUsers(Model model) {
 			String rt = new String("users/list");
 			
-			LOGGER.debug(tesBS.retrieveMessage());
-			LOGGER.debug(facade.retrieveMessage());
-			LOGGER.debug(testDao.retrieveMessage());
-			LOGGER.debug("showAllUsers()");
+			try{
+				LOGGER.debug(tesBS.retrieveMessage());
+				LOGGER.debug(facade.retrieveMessage());
+				LOGGER.debug(testDao.retrieveMessage());
+				LOGGER.debug("showAllUsers()");
+			}catch(Exception e){
+				LOGGER.error(e.getMessage());
+				
+			}
 			
 			return rt;
 		}
