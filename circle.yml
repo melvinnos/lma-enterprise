@@ -16,7 +16,7 @@ machine:
 ## Configuring custom dependencies
 dependencies:
   override:
-    - mvn install
+    - mvn clean install
 
 ## Configuring artifacts to be retrieved
 general:
