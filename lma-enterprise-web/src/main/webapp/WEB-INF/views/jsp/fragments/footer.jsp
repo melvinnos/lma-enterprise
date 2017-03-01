@@ -3,7 +3,7 @@
 <div class="container">
 	<hr/>
 	<footer>
-		<p>&copy; Los Tres Puñalones 2017</p>
+		<p>&copy; Luis el puñalón 2017</p>
 	</footer>
 </div>
 
