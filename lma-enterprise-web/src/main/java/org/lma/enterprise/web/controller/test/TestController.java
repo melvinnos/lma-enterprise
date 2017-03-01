@@ -8,6 +8,7 @@ import org.lma.enterprise.bs.test.TestBSi;
 import org.lma.enterprise.dao.test.TestDAOi;
 import org.lma.enterprise.exception.ExceptionService;
 import org.lma.enterprise.facade.Facadei;
+import org.lma.enterprise.web.controller.Action;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
@@ -23,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller("testController")
 @ComponentScan(basePackages = "org.lma.enterprise")
-public class TestController implements Serializable{
+public class TestController extends Action implements Serializable{
 
 	/**
 	 * 
