@@ -4,16 +4,8 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module archiveName="lma-enterprise-bs-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/lma-enterprise-bs/lma-enterprise-bs">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="lma-enterprise-dao-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/lma-enterprise-dao/lma-enterprise-dao">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="lma-enterprise-util-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/lma-enterprise-util/lma-enterprise-util">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="lma-enterprise-web"/>
         <property name="java-output-path" value="/lma-enterprise-web/target/classes"/>
+        <property name="component.exclusion.patterns" value="WEB-INF/lib/slf4j-api*.jar,WEB-INF/lib/logback*.jar,WEB-INF/lib/lma-enterprise*.jar,WEB-INF/lib/commons*.jar,WEB-INF/lib/log4j*.jar,WEB-INF/lib/jcl-over*.jar"/>
     </wb-module>
 </project-modules>
