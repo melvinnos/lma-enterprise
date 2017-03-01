@@ -6,6 +6,7 @@ import java.io.Serializable;
 import org.apache.log4j.Logger;
 import org.lma.enterprise.bs.test.TestBSi;
 import org.lma.enterprise.dao.test.TestDAOi;
+import org.lma.enterprise.exception.ExceptionService;
 import org.lma.enterprise.facade.Facadei;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -54,9 +55,10 @@ public class TestController implements Serializable{
 				LOGGER.debug(facade.retrieveMessage());
 				LOGGER.debug(testDao.retrieveMessage());
 				LOGGER.debug("showAllUsers()");
+			}catch(ExceptionService e){
+				LOGGER.error(e.getMessage());
 			}catch(Exception e){
 				LOGGER.error(e.getMessage());
-				
 			}
 			
 			return rt;
