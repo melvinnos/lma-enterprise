@@ -1,4 +1,4 @@
-package com.lma.web.controller;
+package org.lma.enterprise.web.controller;
 
 import java.io.Serializable;
 /**

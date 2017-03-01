@@ -1,4 +1,4 @@
-package com.lma.web.spring.configuration;
+package org.lma.enterprise.web.spring.configuration;
 
 import java.util.Properties;
 
@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "com.lma" })
+@ComponentScan({ "org.lma.enterprise" })
 //@PropertySource(value = { "classpath:application.properties" })
 public class HibernateConfiguration {
  

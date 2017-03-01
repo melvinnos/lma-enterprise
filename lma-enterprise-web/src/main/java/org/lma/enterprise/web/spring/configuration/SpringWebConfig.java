@@ -1,4 +1,4 @@
-package com.lma.web.spring.configuration;
+package org.lma.enterprise.web.spring.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({ "com.lma" })
+@ComponentScan({ "org.lma.enterprise" })
 public class SpringWebConfig extends WebMvcConfigurerAdapter {
 
 	@Override
