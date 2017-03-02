@@ -3,7 +3,7 @@ package org.lma.enterprise.dao.test;
 import java.io.Serializable;
 
 import org.apache.log4j.Logger;
-import org.hibernate.Criteria;
+//import org.hibernate.Criteria;
 import org.lma.enterprise.dao.DAO;
 import org.lma.enterprise.exception.ExceptionDao;
 import org.lma.enterprise.util.model.vo.RestaurantVO;

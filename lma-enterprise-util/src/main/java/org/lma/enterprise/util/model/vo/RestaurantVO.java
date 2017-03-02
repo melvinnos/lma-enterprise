@@ -1,7 +1,7 @@
 package org.lma.enterprise.util.model.vo;
 
 import java.math.BigDecimal;
-
+/*
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -10,9 +10,9 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Type;
  
 @Entity
-@Table(name="RESTAURANT")
+@Table(name="RESTAURANT")*/
 public class RestaurantVO {
- 
+ /*
     @Id
     @Column(name = "RESTAURANT_PK", nullable = false)
     private Integer id;
@@ -89,6 +89,6 @@ public class RestaurantVO {
     @Override
     public String toString() {
         return "Employee [id=" + id + ", name=" + name + ", logo=" + logo + ", foodType=" + foodType + "]";
-    }   
+    }   */
  
 }
