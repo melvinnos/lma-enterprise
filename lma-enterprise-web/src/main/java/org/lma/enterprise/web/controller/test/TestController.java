@@ -35,10 +35,6 @@ public class TestController extends Action implements Serializable{
 	
 	@Autowired
 	private Facadei facade;
-	@Autowired
-	private TestBSi tesBS;
-	@Autowired
-	private TestDAOi testDao;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Model model) {
@@ -50,14 +46,13 @@ public class TestController extends Action implements Serializable{
 		@RequestMapping(value = "/users", method = RequestMethod.GET)
 		public String showAllUsers(Model model) {
 			String rt = new String("users/list");
+			String message;
 			
 			try{
-				model.addAttribute("msg", facade.retrieveMessage());
+				message = facade.retrieveMessage();
+				model.addAttribute("msg", message);
 				
-				LOGGER.debug(tesBS.retrieveMessage());
-				LOGGER.debug(facade.retrieveMessage());
-				LOGGER.debug(testDao.retrieveMessage());
-				LOGGER.debug("showAllUsers()");
+				LOGGER.debug(message);
 			}catch(ExceptionService e){
 				LOGGER.error(e.getMessage());
 				model.addAttribute("msg", "Injection Error");
