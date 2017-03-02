@@ -58,7 +58,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>4.3.6.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
@@ -81,7 +81,12 @@
 			<artifactId>spring-tx</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
+		
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-taglibs</artifactId>
+		    <version>4.2.1.RELEASE</version>
+		</dependency>
 		<!-- logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -156,14 +161,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.0.0</version>
 				<configuration>
-					<packagingExcludes>
-						WEB-INF/lib/slf4j-api*.jar,
-						WEB-INF/lib/logback*.jar,
-						WEB-INF/lib/lma-enterprise*.jar,
-						WEB-INF/lib/commons*.jar,
-						WEB-INF/lib/log4j*.jar,
-						WEB-INF/lib/jcl-over*.jar
-					</packagingExcludes>
+					<packagingExcludes></packagingExcludes>
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>

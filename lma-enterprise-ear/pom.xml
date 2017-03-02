@@ -72,9 +72,8 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>4.3.6.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
@@ -96,6 +95,11 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-taglibs</artifactId>
+		    <version>4.2.1.RELEASE</version>
+		</dependency>
 		<!-- Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -231,7 +235,7 @@
 		
 	</dependencies>
 
-	<!-- Skinny WARS -->
+	<!-- Skinny WARS do not remove the lib folder -->
 	<build>
 		<plugins>
 			<plugin>
@@ -239,7 +243,7 @@
 				<version>2.10</version>
 				<configuration>
 					<defaultLibBundleDir>/lib</defaultLibBundleDir>
-					<skinnyWars>false</skinnyWars>
+					<skinnyWars>true</skinnyWars>
 					<modules>
 						<webModule>
 							<groupId>lma-enterprise-web</groupId>

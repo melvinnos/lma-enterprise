@@ -52,14 +52,18 @@ public class TestController extends Action implements Serializable{
 			String rt = new String("users/list");
 			
 			try{
+				model.addAttribute("msg", facade.retrieveMessage());
+				
 				LOGGER.debug(tesBS.retrieveMessage());
 				LOGGER.debug(facade.retrieveMessage());
 				LOGGER.debug(testDao.retrieveMessage());
 				LOGGER.debug("showAllUsers()");
 			}catch(ExceptionService e){
 				LOGGER.error(e.getMessage());
+				model.addAttribute("msg", "Injection Error");
 			}catch(Exception e){
 				LOGGER.error(e.getMessage());
+				model.addAttribute("msg", "Injection Error");
 			}
 			
 			return rt;
