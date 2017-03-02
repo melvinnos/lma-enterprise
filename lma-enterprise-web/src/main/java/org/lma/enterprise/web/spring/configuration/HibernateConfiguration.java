@@ -3,7 +3,8 @@ package org.lma.enterprise.web.spring.configuration;
 import java.util.Properties;
 
 import javax.sql.DataSource;
- 
+
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -18,10 +19,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan({ "org.lma.enterprise" })
-//@PropertySource(value = { "classpath:application.properties" })
+@PropertySource(value = { "classpath:application.properties" })
 public class HibernateConfiguration {
  
-	 /* TODO Uncomment when all the dependencies are added.
+	 /*
     @Autowired
     private Environment environment;
  
