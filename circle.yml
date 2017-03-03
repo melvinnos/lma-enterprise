@@ -30,3 +30,11 @@ test:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
     - mv lma-enterprise-ear/target/*.ear $CIRCLE_ARTIFACTS/
+    
+ ## Configuring deployment
+deployment:
+  production:
+    branch: master
+    commands:
+      - scp $CIRCLE_ARTIFACTS/lma-enterprise-ear-0.0.1-SNAPSHOT.ear root@appofthefuture.hopto.org:/opt/staged
+      - ssh root@appofthefuture.hopto.org /opt/staged/deploy.sh
