@@ -4,8 +4,6 @@ package org.lma.enterprise.web.controller.test;
 import java.io.Serializable;
 
 import org.apache.log4j.Logger;
-import org.lma.enterprise.bs.test.TestBSi;
-import org.lma.enterprise.dao.test.TestDAOi;
 import org.lma.enterprise.exception.ExceptionService;
 import org.lma.enterprise.facade.Facadei;
 import org.lma.enterprise.web.controller.Action;
