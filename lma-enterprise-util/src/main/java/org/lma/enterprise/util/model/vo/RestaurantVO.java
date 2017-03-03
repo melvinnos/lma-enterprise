@@ -1,18 +1,14 @@
 package org.lma.enterprise.util.model.vo;
 
-import java.math.BigDecimal;
-/*
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
  
-import org.hibernate.annotations.Type;
- 
 @Entity
-@Table(name="RESTAURANT")*/
+@Table(name="RESTAURANT")
 public class RestaurantVO {
- /*
+ 
     @Id
     @Column(name = "RESTAURANT_PK", nullable = false)
     private Integer id;
@@ -20,10 +16,10 @@ public class RestaurantVO {
     @Column(name = "RESTAURANT_NAME", nullable = false)
     private String name;
  
-    @Column(name = "RESTAURANT_LOGO", nullable = false)
+    @Column(name = "RESTAURANT_LOGO", nullable = true)
     private String logo;
     
-    @Column(name = "RESTAURANT_FOODTYPE", nullable = false)
+    @Column(name = "RESTAURANT_FOODTYPE", nullable = true)
     private String foodType;
  
     public Integer getId() {
@@ -89,6 +85,6 @@ public class RestaurantVO {
     @Override
     public String toString() {
         return "Employee [id=" + id + ", name=" + name + ", logo=" + logo + ", foodType=" + foodType + "]";
-    }   */
+    }   
  
 }

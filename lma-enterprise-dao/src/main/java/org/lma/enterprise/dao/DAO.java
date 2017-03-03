@@ -1,16 +1,14 @@
 package org.lma.enterprise.dao;
 
-
-/*
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.type.StandardBasicTypes;
 import org.lma.enterprise.util.Sequence;
 import org.springframework.beans.factory.annotation.Autowired;
-*/
+
 public class DAO implements DAOi{
-	/*
+	
 	@Autowired
     private SessionFactory sessionFactory;
  
@@ -36,5 +34,5 @@ public class DAO implements DAOi{
     			addScalar("num", StandardBasicTypes.INTEGER);
 
     	return (Integer)query.uniqueResult();
-    }*/
+    }
 }
