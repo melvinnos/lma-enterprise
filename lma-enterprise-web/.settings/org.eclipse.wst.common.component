@@ -3,7 +3,9 @@
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <property name="context-root" value="lma-enterprise-web"/>
         <property name="java-output-path" value="/lma-enterprise-web/target/classes"/>
+        <property name="component.exclusion.patterns" value="WEB-INF/lib/slf4j-api*.jar,WEB-INF/lib/logback*.jar,WEB-INF/lib/lma-enterprise*.jar,WEB-INF/lib/commons*.jar,WEB-INF/lib/log4j*.jar,WEB-INF/lib/jcl-over*.jar"/>
     </wb-module>
 </project-modules>

@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>This is an EAR test</h2>
+<h2>Hello World!</h2>
 </body>
 </html>
