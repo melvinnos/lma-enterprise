@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository("testDAO")
 @ComponentScan(basePackages = "org.lma.enterprise")
-public class TestDAO extends DAO implements TestDAOi, Serializable{
+public class TestDAO extends DAO<RestaurantVO> implements TestDAOi, Serializable{
 
 	/**
 	 * 
