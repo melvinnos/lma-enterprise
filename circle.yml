@@ -16,7 +16,7 @@ machine:
 ## Configuring custom dependencies
 dependencies:
   pre:
-    - wget wget http://download.oracle.com/otn/utilities_drivers/jdbc/11204/ojdbc6.jar -O ojdbc6.jar 
+    - wget http://download.oracle.com/otn/utilities_drivers/jdbc/11204/ojdbc6.jar -O ojdbc6.jar 
     - mvn install:install-file -Dfile=ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0 -Dpackaging=jar
   override:
     - mvn clean install
