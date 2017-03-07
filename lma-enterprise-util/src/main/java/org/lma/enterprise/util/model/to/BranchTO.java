@@ -6,73 +6,73 @@ public class BranchTO extends TO{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private Integer id;
+	private Long branchPk;
+
+	private String branchAddress;
+
+	private String branchCoordinates;
+
+	private String branchMail;
+
+	private String branchName;
+
+	private String branchPhone;
 	
-    private String name;
+	private Long restaurantPk;
 
-    private Integer restaurantId;
-    
-    private String address;
-    
-    private String phone;
-    
-    private String email;
-    
-    private String coordinates;
-
-	public Integer getId() {
-		return id;
+	public Long getBranchPk() {
+		return branchPk;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setBranchPk(Long branchPk) {
+		this.branchPk = branchPk;
 	}
 
-	public String getName() {
-		return name;
+	public String getBranchAddress() {
+		return branchAddress;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setBranchAddress(String branchAddress) {
+		this.branchAddress = branchAddress;
 	}
 
-	public Integer getRestaurantId() {
-		return restaurantId;
+	public String getBranchCoordinates() {
+		return branchCoordinates;
 	}
 
-	public void setRestaurantId(Integer restaurantId) {
-		this.restaurantId = restaurantId;
+	public void setBranchCoordinates(String branchCoordinates) {
+		this.branchCoordinates = branchCoordinates;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getBranchMail() {
+		return branchMail;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setBranchMail(String branchMail) {
+		this.branchMail = branchMail;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getBranchName() {
+		return branchName;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setBranchName(String branchName) {
+		this.branchName = branchName;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getBranchPhone() {
+		return branchPhone;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setBranchPhone(String branchPhone) {
+		this.branchPhone = branchPhone;
 	}
 
-	public String getCoordinates() {
-		return coordinates;
+	public Long getRestaurantPk() {
+		return restaurantPk;
 	}
 
-	public void setCoordinates(String coordinates) {
-		this.coordinates = coordinates;
+	public void setRestaurantPk(Long restaurantPk) {
+		this.restaurantPk = restaurantPk;
 	}
 }

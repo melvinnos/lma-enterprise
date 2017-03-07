@@ -1,10 +1,15 @@
 package org.lma.enterprise.util.model.vo;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -17,89 +22,50 @@ public class BranchVO  implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
-    @Column(name = "BRANCH_PK", nullable = false)
-	private Integer id;
-	
-	@Column(name = "BRANCH_NAME", nullable = false)
-    private String name;
+	@Column(name="BRANCH_PK")
+	private Long branchPk;
 
-	@Column(name = "RESTAURANT_ID", nullable = false)
-    private Integer restaurantId;
-    
-	@Column(name = "BRANCH_ADDRESS", nullable = false)
-    private String address;
-    
-	@Column(name = "BRANCH_PHONE", nullable = false)
-    private String phone;
-    
-	@Column(name = "BRANCH_MAIL", nullable = true)
-    private String email;
-    
-	@Column(name = "BRANCH_COORDINATES", nullable = true)
-    private String coordinates;
+	@Column(name="BRANCH_ADDRESS")
+	private String branchAddress;
 
-	public Integer getId() {
-		return id;
+	@Column(name="BRANCH_COORDINATES")
+	private String branchCoordinates;
+
+	@Column(name="BRANCH_MAIL")
+	private String branchMail;
+
+	@Column(name="BRANCH_NAME")
+	private String branchName;
+
+	@Column(name="BRANCH_PHONE")
+	private String branchPhone;
+
+	//bi-directional many-to-one association to Restaurant
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="BRANCH_RESTAURANT_ID")
+	private RestaurantVO restaurant;
+
+	//bi-directional many-to-one association to Promo
+	@OneToMany(mappedBy="branch")
+	private List<PromoVO> promos;
+
+	//bi-directional many-to-one association to Staff
+	@OneToMany(mappedBy="branch")
+	private List<StaffVO> staffs;
+
+	//bi-directional many-to-one association to Table
+	@OneToMany(mappedBy="branch")
+	private List<TableVO> tables;
+
+	public BranchVO() {
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Integer getRestaurantId() {
-		return restaurantId;
-	}
-
-	public void setRestaurantId(Integer restaurantId) {
-		this.restaurantId = restaurantId;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getCoordinates() {
-		return coordinates;
-	}
-
-	public void setCoordinates(String coordinates) {
-		this.coordinates = coordinates;
-	}
-	
 	@Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + id;
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        result = prime * result + branchPk.intValue();
+        result = prime * result + ((branchName == null) ? 0 : branchName.hashCode());
         return result;
     }
  
@@ -112,18 +78,93 @@ public class BranchVO  implements Serializable{
         if (!(obj instanceof BranchVO))
             return false;
         BranchVO other = (BranchVO) obj;
-        if (id != other.id)
+        if (branchPk != other.branchPk)
             return false;
-        if (name == null) {
-            if (other.name != null)
+        if (branchName == null) {
+            if (other.branchName != null)
                 return false;
-        } else if (!name.equals(other.name))
+        } else if (!branchName.equals(other.branchName))
             return false;
         return true;
     }
- 
-    @Override
-    public String toString() {
-        return "Branch [id=" + id + ", name=" + name + ", RestaurantID=" + restaurantId+ ", address=" + address + "]";
-    }   
+
+	public Long getBranchPk() {
+		return branchPk;
+	}
+
+	public void setBranchPk(Long branchPk) {
+		this.branchPk = branchPk;
+	}
+
+	public String getBranchAddress() {
+		return branchAddress;
+	}
+
+	public void setBranchAddress(String branchAddress) {
+		this.branchAddress = branchAddress;
+	}
+
+	public String getBranchCoordinates() {
+		return branchCoordinates;
+	}
+
+	public void setBranchCoordinates(String branchCoordinates) {
+		this.branchCoordinates = branchCoordinates;
+	}
+
+	public String getBranchMail() {
+		return branchMail;
+	}
+
+	public void setBranchMail(String branchMail) {
+		this.branchMail = branchMail;
+	}
+
+	public String getBranchName() {
+		return branchName;
+	}
+
+	public void setBranchName(String branchName) {
+		this.branchName = branchName;
+	}
+
+	public String getBranchPhone() {
+		return branchPhone;
+	}
+
+	public void setBranchPhone(String branchPhone) {
+		this.branchPhone = branchPhone;
+	}
+
+	public RestaurantVO getRestaurant() {
+		return restaurant;
+	}
+
+	public void setRestaurant(RestaurantVO restaurant) {
+		this.restaurant = restaurant;
+	}
+
+	public List<PromoVO> getPromos() {
+		return promos;
+	}
+
+	public void setPromos(List<PromoVO> promos) {
+		this.promos = promos;
+	}
+
+	public List<StaffVO> getStaffs() {
+		return staffs;
+	}
+
+	public void setStaffs(List<StaffVO> staffs) {
+		this.staffs = staffs;
+	}
+
+	public List<TableVO> getTables() {
+		return tables;
+	}
+
+	public void setTables(List<TableVO> tables) {
+		this.tables = tables;
+	} 
 }

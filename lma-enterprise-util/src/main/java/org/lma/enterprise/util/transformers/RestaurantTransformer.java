@@ -17,10 +17,10 @@ public class RestaurantTransformer implements TransformerHelperi<RestaurantTO, R
 	public void transform2ValueObject(RestaurantVO valueObject, RestaurantTO transferObject) throws ExceptionService {
 		try {
 			if (transferObject != null){
-				valueObject.setId(transferObject.getId());
-				valueObject.setName(transferObject.getName());
-				valueObject.setLogo(transferObject.getLogo());
-				valueObject.setFoodType(transferObject.getFoodType());
+				valueObject.setRestaurantPk(transferObject.getRestaurantPk());
+				valueObject.setRestaurantName(transferObject.getRestaurantName());
+				valueObject.setRestaurantLogo(transferObject.getRestaurantLogo());
+				valueObject.setRestaurantFoodtype(transferObject.getRestaurantFoodtype());
 			}
 		}catch (Exception e) {
 			ExceptionService exception = new ExceptionService(e.getMessage());
@@ -34,10 +34,10 @@ public class RestaurantTransformer implements TransformerHelperi<RestaurantTO, R
 			throws ExceptionService {
 		try {
 			if (valueObject != null){
-				transferObject.setId(valueObject.getId());
-				transferObject.setName(valueObject.getName());
-				transferObject.setLogo(valueObject.getLogo());
-				transferObject.setFoodType(valueObject.getFoodType());
+				transferObject.setRestaurantPk(valueObject.getRestaurantPk());
+				transferObject.setRestaurantName(valueObject.getRestaurantName());
+				transferObject.setRestaurantLogo(valueObject.getRestaurantLogo());
+				transferObject.setRestaurantFoodtype(valueObject.getRestaurantFoodtype());
 			}
 		}catch (Exception e) {
 			ExceptionService exception = new ExceptionService(e.getMessage());

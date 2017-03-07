@@ -6,43 +6,43 @@ public class RestaurantTO extends TO{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private Integer id;
-	 
-    private String name;
- 
-    private String logo;
-    
-    private String foodType;
+	private Long restaurantPk;
 
-	public Integer getId() {
-		return id;
+	private String restaurantFoodtype;
+
+	private String restaurantLogo;
+
+	private String restaurantName;
+
+	public Long getRestaurantPk() {
+		return restaurantPk;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setRestaurantPk(Long restaurantPk) {
+		this.restaurantPk = restaurantPk;
 	}
 
-	public String getName() {
-		return name;
+	public String getRestaurantFoodtype() {
+		return restaurantFoodtype;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setRestaurantFoodtype(String restaurantFoodtype) {
+		this.restaurantFoodtype = restaurantFoodtype;
 	}
 
-	public String getLogo() {
-		return logo;
+	public String getRestaurantLogo() {
+		return restaurantLogo;
 	}
 
-	public void setLogo(String logo) {
-		this.logo = logo;
+	public void setRestaurantLogo(String restaurantLogo) {
+		this.restaurantLogo = restaurantLogo;
 	}
 
-	public String getFoodType() {
-		return foodType;
+	public String getRestaurantName() {
+		return restaurantName;
 	}
 
-	public void setFoodType(String foodType) {
-		this.foodType = foodType;
+	public void setRestaurantName(String restaurantName) {
+		this.restaurantName = restaurantName;
 	}
 }

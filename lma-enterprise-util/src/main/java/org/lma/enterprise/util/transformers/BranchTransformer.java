@@ -17,13 +17,12 @@ public class BranchTransformer implements TransformerHelperi<BranchTO, BranchVO>
 	public void transform2ValueObject(BranchVO valueObject, BranchTO transferObject) throws ExceptionService {
 		try {
 			if (transferObject != null){
-				valueObject.setId(transferObject.getId());
-				valueObject.setName(transferObject.getName());
-				valueObject.setRestaurantId(transferObject.getRestaurantId());
-				valueObject.setAddress(transferObject.getAddress());
-				valueObject.setPhone(transferObject.getPhone());
-				valueObject.setEmail(transferObject.getEmail());
-				valueObject.setCoordinates(transferObject.getCoordinates());
+				valueObject.setBranchPk(transferObject.getBranchPk());
+				valueObject.setBranchName(transferObject.getBranchName());
+				valueObject.setBranchAddress(transferObject.getBranchAddress());
+				valueObject.setBranchPhone(transferObject.getBranchPhone());
+				valueObject.setBranchMail(transferObject.getBranchMail());
+				valueObject.setBranchCoordinates(transferObject.getBranchCoordinates());
 			}
 		}catch (Exception e) {
 			ExceptionService exception = new ExceptionService(e.getMessage());
@@ -37,13 +36,12 @@ public class BranchTransformer implements TransformerHelperi<BranchTO, BranchVO>
 			throws ExceptionService {
 		try {
 			if (valueObject != null){
-				transferObject.setId(valueObject.getId());
-				transferObject.setName(valueObject.getName());
-				transferObject.setRestaurantId(valueObject.getRestaurantId());
-				transferObject.setAddress(valueObject.getAddress());
-				transferObject.setPhone(valueObject.getPhone());
-				transferObject.setEmail(valueObject.getEmail());
-				transferObject.setCoordinates(valueObject.getCoordinates());
+				transferObject.setBranchPk(valueObject.getBranchPk());
+				transferObject.setBranchName(valueObject.getBranchName());
+				transferObject.setBranchAddress(valueObject.getBranchAddress());
+				transferObject.setBranchPhone(valueObject.getBranchPhone());
+				transferObject.setBranchMail(valueObject.getBranchMail());
+				transferObject.setBranchCoordinates(valueObject.getBranchCoordinates());
 			}
 		}catch (Exception e) {
 			ExceptionService exception = new ExceptionService(e.getMessage());

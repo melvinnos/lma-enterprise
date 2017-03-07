@@ -36,7 +36,7 @@ public class TestDAO extends DAO<RestaurantVO> implements TestDAOi, Serializable
 			results = (List<RestaurantVO>)criteria.list();
 			
 			if(results != null && results.size() > 0){
-				retValue = results.get(0).getName();
+				retValue = results.get(0).getRestaurantName();
 			}
 		}catch(Exception exception){
 			LOGGER.error("An error has happened while querying the database", exception);
