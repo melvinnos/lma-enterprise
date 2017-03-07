@@ -24,7 +24,7 @@ public class StaffVO implements Serializable {
 	private String staffLastName;
 
 	@Column(name="STAFF_REPORTS_TO")
-	private Double staffReportsTo;
+	private Long staffReportsTo;
 
 	@Column(name="STAFF_ROLE")
 	private String staffRole;
@@ -61,11 +61,11 @@ public class StaffVO implements Serializable {
 		this.staffLastName = staffLastName;
 	}
 
-	public Double getStaffReportsTo() {
+	public Long getStaffReportsTo() {
 		return this.staffReportsTo;
 	}
 
-	public void setStaffReportsTo(Double staffReportsTo) {
+	public void setStaffReportsTo(Long staffReportsTo) {
 		this.staffReportsTo = staffReportsTo;
 	}
 
@@ -77,11 +77,11 @@ public class StaffVO implements Serializable {
 		this.staffRole = staffRole;
 	}
 
-	public BranchVO getBranchVO() {
+	public BranchVO getBranch() {
 		return this.branch;
 	}
 
-	public void setBranchVO(BranchVO branch) {
+	public void setBranch(BranchVO branch) {
 		this.branch = branch;
 	}
 

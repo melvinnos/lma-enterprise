@@ -35,7 +35,7 @@ public class PromoVO implements Serializable {
 	//bi-directional many-to-one association to Branch
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="PROMO_BRANCH_ID")
-	private BranchVO branchVO;
+	private BranchVO branch;
 
 	//bi-directional many-to-one association to Product
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -85,12 +85,12 @@ public class PromoVO implements Serializable {
 		this.promoStartDate = promoStartDate;
 	}
 
-	public BranchVO getBranchVO() {
-		return this.branchVO;
+	public BranchVO getBranch() {
+		return this.branch;
 	}
 
-	public void setBranchVO(BranchVO branchVO) {
-		this.branchVO = branchVO;
+	public void setBranch(BranchVO branch) {
+		this.branch = branch;
 	}
 
 	public ProductVO getProduct() {

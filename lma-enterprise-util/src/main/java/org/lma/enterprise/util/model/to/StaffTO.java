@@ -9,7 +9,7 @@ public class StaffTO extends TO{
 
 	private String staffLastName;
 
-	private Double staffReportsTo;
+	private Long staffReportsTo;
 
 	private String staffRole;
 	
@@ -39,11 +39,11 @@ public class StaffTO extends TO{
 		this.staffLastName = staffLastName;
 	}
 
-	public Double getStaffReportsTo() {
+	public Long getStaffReportsTo() {
 		return staffReportsTo;
 	}
 
-	public void setStaffReportsTo(Double staffReportsTo) {
+	public void setStaffReportsTo(Long staffReportsTo) {
 		this.staffReportsTo = staffReportsTo;
 	}
 

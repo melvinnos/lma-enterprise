@@ -8,6 +8,7 @@ import org.lma.enterprise.exception.ExceptionService;
 import org.lma.enterprise.util.TransformerHelperi;
 import org.lma.enterprise.util.model.to.BranchTO;
 import org.lma.enterprise.util.model.vo.BranchVO;
+import org.lma.enterprise.util.model.vo.RestaurantVO;
 
 public class BranchTransformer implements TransformerHelperi<BranchTO, BranchVO>{
 
@@ -23,6 +24,12 @@ public class BranchTransformer implements TransformerHelperi<BranchTO, BranchVO>
 				valueObject.setBranchPhone(transferObject.getBranchPhone());
 				valueObject.setBranchMail(transferObject.getBranchMail());
 				valueObject.setBranchCoordinates(transferObject.getBranchCoordinates());
+				
+				if(valueObject.getRestaurant() == null){
+					valueObject.setRestaurant(new RestaurantVO());
+				}
+				
+				valueObject.getRestaurant().setRestaurantPk(transferObject.getRestaurantPk());
 			}
 		}catch (Exception e) {
 			ExceptionService exception = new ExceptionService(e.getMessage());
@@ -42,6 +49,8 @@ public class BranchTransformer implements TransformerHelperi<BranchTO, BranchVO>
 				transferObject.setBranchPhone(valueObject.getBranchPhone());
 				transferObject.setBranchMail(valueObject.getBranchMail());
 				transferObject.setBranchCoordinates(valueObject.getBranchCoordinates());
+				
+				transferObject.setRestaurantPk(valueObject.getRestaurant().getRestaurantPk());
 			}
 		}catch (Exception e) {
 			ExceptionService exception = new ExceptionService(e.getMessage());
