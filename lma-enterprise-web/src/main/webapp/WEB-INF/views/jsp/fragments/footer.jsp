@@ -2,7 +2,7 @@
 
 <hr />
 <footer class="container-fluid footer">
-	Copyright &copy; 2017 <a href="http://freakpixels.com/" target="_blank">Luis el puñalón</a>
+	Copyright &copy; 2017 <a href="http://freakpixels.com/" target="_blank">Desarrollos Camaleón</a>
 	<a href="#" class="pull-right scrollToTop"><i
 		class="fa fa-chevron-up"></i></a>
 </footer>

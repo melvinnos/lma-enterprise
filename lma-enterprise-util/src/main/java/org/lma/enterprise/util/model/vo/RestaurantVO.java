@@ -91,7 +91,7 @@ public class RestaurantVO implements Serializable{
  
     @Override
     public String toString() {
-        return "Employee [id=" + id + ", name=" + name + ", logo=" + logo + ", foodType=" + foodType + "]";
+        return "Restaurant [id=" + id + ", name=" + name + ", logo=" + logo + ", foodType=" + foodType + "]";
     }   
  
 }
