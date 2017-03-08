@@ -33,9 +33,6 @@ public class ReservationTransformer implements TransformerHelperi<ReservationTO,
 					valueObject.setTable(new TableVO());
 				}
 				
-				valueObject.getTable().getId().setBranchId(transferObject.getBranchPk());
-				valueObject.getTable().getId().setTablePk(transferObject.getTablePk());
-				
 				if(valueObject.getProfile() == null){
 					valueObject.setProfile(new ProfileVO());
 				}
@@ -63,8 +60,8 @@ public class ReservationTransformer implements TransformerHelperi<ReservationTO,
 				transferObject.setReservationUserMail(valueObject.getReservationUserMail());
 				transferObject.setReservationUserPhone(valueObject.getReservationUserPhone());
 				
-				transferObject.setBranchPk(valueObject.getTable().getId().getBranchId());
-				transferObject.setTablePk(valueObject.getTable().getId().getTablePk());
+				transferObject.setBranchPk(valueObject.getTable().getBranch().getBranchPk());
+				transferObject.setTablePk(valueObject.getTable().getTablePk());
 				transferObject.setProfilePk(valueObject.getProfile().getProfilePk());
 			}
 		}catch (Exception e) {

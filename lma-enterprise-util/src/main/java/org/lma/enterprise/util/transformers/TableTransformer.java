@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import org.lma.enterprise.exception.ExceptionService;
 import org.lma.enterprise.util.TransformerHelperi;
 import org.lma.enterprise.util.model.to.TableTO;
-import org.lma.enterprise.util.model.vo.TablePKVO;
+import org.lma.enterprise.util.model.vo.BranchVO;
 import org.lma.enterprise.util.model.vo.TableVO;
 
 public class TableTransformer implements TransformerHelperi<TableTO, TableVO>{
@@ -18,15 +18,17 @@ public class TableTransformer implements TransformerHelperi<TableTO, TableVO>{
 	public void transform2ValueObject(TableVO valueObject, TableTO transferObject) throws ExceptionService {
 		try {
 			if (transferObject != null){
-				valueObject.setId(new TablePKVO());
-				
-				valueObject.getId().setTablePk(transferObject.getTablePk());
-				valueObject.getId().setBranchId(transferObject.getBranchPk());
-				
+				valueObject.setTablePk(transferObject.getTablePk());
 				valueObject.setTableAvbChairs(transferObject.getTableAvbChairs());
 				valueObject.setTableName(transferObject.getTableName());
 				valueObject.setTableReservable(transferObject.getTableReservable());
 				valueObject.setTableType(transferObject.getTableType());
+				
+				if(valueObject.getBranch() == null){
+					valueObject.setBranch(new BranchVO());
+				}
+				
+				valueObject.getBranch().setBranchPk(transferObject.getBranchPk());
 			}
 		}catch (Exception e) {
 			ExceptionService exception = new ExceptionService(e.getMessage());
@@ -40,13 +42,13 @@ public class TableTransformer implements TransformerHelperi<TableTO, TableVO>{
 			throws ExceptionService {
 		try {
 			if (valueObject != null){
-				transferObject.setTablePk(valueObject.getId().getTablePk());
+				transferObject.setTablePk(valueObject.getTablePk());
 				transferObject.setTableAvbChairs(valueObject.getTableAvbChairs());
 				transferObject.setTableName(valueObject.getTableName());
 				transferObject.setTableReservable(valueObject.getTableReservable());
 				transferObject.setTableType(valueObject.getTableType());
 				
-				transferObject.setBranchPk(valueObject.getId().getBranchId());
+				transferObject.setBranchPk(valueObject.getBranch().getBranchPk());
 			}
 		}catch (Exception e) {
 			ExceptionService exception = new ExceptionService(e.getMessage());

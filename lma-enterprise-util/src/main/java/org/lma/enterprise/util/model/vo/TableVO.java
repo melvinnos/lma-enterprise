@@ -14,8 +14,9 @@ import java.util.List;
 public class TableVO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@EmbeddedId
-	private TablePKVO id;
+	@Id
+	@Column(name="TABLE_PK")
+	private Long tablePk;
 
 	@Column(name="TABLE_AVB_CHAIRS")
 	private Double tableAvbChairs;
@@ -36,18 +37,21 @@ public class TableVO implements Serializable {
 	//bi-directional many-to-one association to Branch
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="BRANCH_ID")
-	private BranchVO branchVO;
+	private BranchVO branch;
 
 	public TableVO() {
 	}
 
-	public TablePKVO getId() {
-		return this.id;
+	
+	public Long getTablePk() {
+		return tablePk;
 	}
 
-	public void setId(TablePKVO id) {
-		this.id = id;
+
+	public void setTablePk(Long tablePk) {
+		this.tablePk = tablePk;
 	}
+
 
 	public Double getTableAvbChairs() {
 		return this.tableAvbChairs;
@@ -89,12 +93,11 @@ public class TableVO implements Serializable {
 		this.reservations = reservations;
 	}
 
-	public BranchVO getBranchVO() {
-		return this.branchVO;
+	public BranchVO getBranch() {
+		return branch;
 	}
 
-	public void setBranchVO(BranchVO branchVO) {
-		this.branchVO = branchVO;
+	public void setBranch(BranchVO branch) {
+		this.branch = branch;
 	}
-
 }

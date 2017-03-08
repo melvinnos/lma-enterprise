@@ -8,8 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.dom4j.Branch;
  
 @Entity
 @Table(name="RESTAURANT")
@@ -35,7 +33,7 @@ public class RestaurantVO implements Serializable{
 
 	//bi-directional many-to-one association to Branch
 	@OneToMany(mappedBy="restaurant")
-	private List<Branch> branches;
+	private List<BranchVO> branches;
 
 	public RestaurantVO() {
 	}
@@ -72,11 +70,11 @@ public class RestaurantVO implements Serializable{
 		this.restaurantName = restaurantName;
 	}
 
-	public List<Branch> getBranches() {
+	public List<BranchVO> getBranches() {
 		return this.branches;
 	}
 
-	public void setBranches(List<Branch> branches) {
+	public void setBranches(List<BranchVO> branches) {
 		this.branches = branches;
 	}
 	

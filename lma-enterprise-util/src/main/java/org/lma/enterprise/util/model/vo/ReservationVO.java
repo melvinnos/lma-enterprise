@@ -48,10 +48,7 @@ public class ReservationVO implements Serializable {
 
 	//bi-directional many-to-one association to Table
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumns({
-		@JoinColumn(name="RESERVATION_BRANCH_ID", referencedColumnName="BRANCH_ID"),
-		@JoinColumn(name="RESERVATION_TABLE_ID", referencedColumnName="TABLE_PK")
-		})
+	@JoinColumn(name="TABLE_ID")
 	private TableVO table;
 
 	public ReservationVO() {
